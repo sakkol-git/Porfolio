@@ -20,15 +20,22 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
   const others = allProjects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   return (
-    <main className="max-w-container-max mx-auto px-6 md:px-10 pt-32 pb-24 flex flex-col gap-16 md:gap-24">
-      {/* 1. Hero Section */}
-      <HeroSection project={project} />
+    <main className="max-w-container-max mx-auto px-6 md:px-10 pt-32 pb-24 flex flex-col gap-16">
+      <FadeIn direction="right">
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 text-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors w-fit"
+        >
+          <ArrowLeft size={18} />
+          All projects
+        </Link>
+      </FadeIn>
 
-      {/* Main Content Sections */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         
         {/* Left Column (Main details) */}
-        <div className="lg:col-span-8 flex flex-col gap-20">
+        <div className="lg:col-span-8 flex flex-col gap-16 md:gap-20">
+          <HeroContent project={project} />
           <BusinessContext project={project} />
           <SolutionSection project={project} />
           <ArchitectureSection project={project} />
@@ -38,8 +45,11 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
           <ChallengesSection project={project} />
         </div>
 
-        {/* Right Column (Metrics & Learnings) */}
-        <div className="lg:col-span-4 flex flex-col gap-12 lg:sticky lg:top-[380px] h-fit z-10">
+        {/* Right Column (Snapshot, Metrics & Learnings) */}
+        <div className="lg:col-span-4 flex flex-col gap-12 lg:sticky lg:top-24 h-fit z-10">
+          <FadeIn delay={0.3}>
+            <ProjectSnapshotCard project={project} />
+          </FadeIn>
           <MetricsSection project={project} />
           <LearningsSection project={project} />
         </div>
@@ -56,103 +66,91 @@ export function ProjectDetailClient({ project }: ProjectDetailClientProps) {
 
 // --- Sub-components (Optimized for performance and readability) ---
 
-function HeroSection({ project }: { project: Project }) {
+function HeroContent({ project }: { project: Project }) {
   return (
-    <section className="flex flex-col gap-10">
-      <FadeIn direction="right">
-        <Link
-          href="/projects"
-          className="inline-flex items-center gap-2 text-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors w-fit"
-        >
-          <ArrowLeft size={18} />
-          All projects
-        </Link>
-      </FadeIn>
+    <StaggerContainer className="flex flex-col gap-6">
+      <StaggerItem>
+        <div className="flex flex-col gap-2">
+          <span className="text-primary-fixed text-label-caps uppercase tracking-wider font-semibold">
+            {project.year} · {project.role}
+          </span>
+          <h1 className="text-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight font-bold">
+            {project.title}
+          </h1>
+        </div>
+      </StaggerItem>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-        <StaggerContainer className="lg:col-span-8 flex flex-col gap-6">
-          <StaggerItem>
-            <div className="flex flex-col gap-2">
-              <span className="text-primary-fixed text-label-caps uppercase tracking-wider font-semibold">
-                {project.year} · {project.role}
-              </span>
-              <h1 className="text-display text-4xl md:text-5xl lg:text-6xl text-primary leading-tight font-bold">
-                {project.title}
-              </h1>
-            </div>
-          </StaggerItem>
+      <StaggerItem>
+        <p className="text-headline-sm text-on-surface-variant font-medium border-l-4 border-primary-fixed pl-4 italic">
+          {project.impactStatement}
+        </p>
+      </StaggerItem>
 
-          <StaggerItem>
-            <p className="text-headline-sm text-on-surface-variant font-medium border-l-4 border-primary-fixed pl-4 italic">
-              {project.impactStatement}
-            </p>
-          </StaggerItem>
+      <StaggerItem>
+        <div className="flex flex-wrap gap-2 mt-2">
+          {project.techStack.map((t) => (
+            <span
+              key={t}
+              className="glass-pill px-3 py-1.5 rounded-md text-meta text-primary-fixed font-medium bg-primary-fixed/10 border border-primary-fixed/20 shadow-[0_0_10px_rgba(var(--color-primary-fixed-rgb),0.1)]"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      </StaggerItem>
 
-          <StaggerItem>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {project.techStack.map((t) => (
-                <span
-                  key={t}
-                  className="glass-pill px-3 py-1.5 rounded-md text-meta text-primary-fixed font-medium bg-primary-fixed/10 border border-primary-fixed/20 shadow-[0_0_10px_rgba(var(--color-primary-fixed-rgb),0.1)]"
+      {(
+        (project.links.productionUrl && project.links.productionUrl !== "#") ||
+        (project.links.repoUrl && project.links.repoUrl !== "#") ||
+        (project.links.architectureDiagram && project.links.architectureDiagram !== "#")
+      ) && (
+        <StaggerItem>
+          <div className="flex flex-wrap gap-4 mt-4">
+            {project.links.productionUrl && project.links.productionUrl !== "#" && (
+              <HoverScale>
+                <a
+                  href={project.links.productionUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center justify-center gap-2 bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-md text-body-md font-bold hover:bg-primary-fixed-dim transition-colors shadow-lg shadow-primary-fixed/20"
                 >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </StaggerItem>
+                  <ExternalLink size={18} strokeWidth={2} />
+                  Live Demo
+                </a>
+              </HoverScale>
+            )}
+            
+            {project.links.repoUrl && project.links.repoUrl !== "#" && (
+              <HoverScale>
+                <a
+                  href={project.links.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass-card border border-card-border flex items-center justify-center gap-2 px-6 py-3 rounded-md text-body-md text-primary hover:text-primary-fixed hover:border-primary-fixed transition-colors"
+                >
+                  <Code2 size={18} />
+                  Source Code
+                </a>
+              </HoverScale>
+            )}
 
-          <StaggerItem>
-            <div className="flex flex-wrap gap-4 mt-4">
-              {project.links.productionUrl && project.links.productionUrl !== "#" && (
-                <HoverScale>
-                  <a
-                    href={project.links.productionUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-2 bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-md text-body-md font-bold hover:bg-primary-fixed-dim transition-colors shadow-lg shadow-primary-fixed/20"
-                  >
-                    <ExternalLink size={18} strokeWidth={2} />
-                    Live Demo
-                  </a>
-                </HoverScale>
-              )}
-              
-              {project.links.repoUrl && project.links.repoUrl !== "#" && (
-                <HoverScale>
-                  <a
-                    href={project.links.repoUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="glass-card border border-card-border flex items-center justify-center gap-2 px-6 py-3 rounded-md text-body-md text-primary hover:text-primary-fixed hover:border-primary-fixed transition-colors"
-                  >
-                    <Code2 size={18} />
-                    Source Code
-                  </a>
-                </HoverScale>
-              )}
-
-              {project.links.architectureDiagram && project.links.architectureDiagram !== "#" && (
-                <HoverScale>
-                  <a
-                    href={project.links.architectureDiagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="glass-card border border-card-border flex items-center justify-center gap-2 px-6 py-3 rounded-md text-body-md text-primary hover:text-primary-fixed hover:border-primary-fixed transition-colors"
-                  >
-                    <Network size={18} />
-                    Architecture Diagram
-                  </a>
-                </HoverScale>
-              )}
-            </div>
-          </StaggerItem>
-        </StaggerContainer>
-
-        <FadeIn delay={0.3} className="lg:col-span-4 lg:sticky lg:top-24 h-fit z-10">
-          <ProjectSnapshotCard project={project} />
-        </FadeIn>
-      </div>
-    </section>
+            {project.links.architectureDiagram && project.links.architectureDiagram !== "#" && (
+              <HoverScale>
+                <a
+                  href={project.links.architectureDiagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass-card border border-card-border flex items-center justify-center gap-2 px-6 py-3 rounded-md text-body-md text-primary hover:text-primary-fixed hover:border-primary-fixed transition-colors"
+                >
+                  <Network size={18} />
+                  Architecture Diagram
+                </a>
+              </HoverScale>
+            )}
+          </div>
+        </StaggerItem>
+      )}
+    </StaggerContainer>
   );
 }
 
