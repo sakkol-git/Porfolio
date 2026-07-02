@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   },
   description:
     "Portfolio of Chen Sakkol — Full-Stack Developer building secure, scalable web and mobile apps with Laravel, Spring Boot, React and Next.js.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

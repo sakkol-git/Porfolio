@@ -19,15 +19,15 @@ export function Hero({ profile }: HeroProps) {
   return (
     <div className="min-h-screen bg-background flex flex-col pt-8 pb-12 px-8 md:px-12 lg:px-16 overflow-hidden">
       {/* Top Logo */}
-      <FadeIn className="w-full text-center mb-12">
-        <span className="font-display font-bold text-2xl text-primary tracking-tight">
+      <FadeIn className="w-full text-center mb-8 mt-8">
+        <span className="font-display font-bold text-4xl text-primary tracking-tight">
           SakkolDev
         </span>
       </FadeIn>
 
       {/* Main Content Grid - 3 Columns */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 flex-grow items-center max-w-container-max mx-auto w-full">
-        
+
         {/* Left Column (Bio) */}
         <StaggerContainer className="lg:col-span-4 flex flex-col items-start order-2 lg:order-1">
           <StaggerItem>
@@ -35,13 +35,13 @@ export function Hero({ profile }: HeroProps) {
               Hello 👋
             </span>
           </StaggerItem>
-          
+
           <StaggerItem>
             <h1 className="text-display text-4xl lg:text-5xl xl:text-6xl text-primary mb-6 leading-tight">
               I&apos;m {profile.name}
             </h1>
           </StaggerItem>
-          
+
           <StaggerItem>
             <p className="text-body-md lg:text-body-lg text-body-text mb-10 max-w-md leading-relaxed">
               Third-year IT Engineering student and Full-Stack Developer passionate
@@ -49,7 +49,7 @@ export function Hero({ profile }: HeroProps) {
               Laravel, Spring Boot, React.js and Next.js.
             </p>
           </StaggerItem>
-          
+
           <StaggerItem>
             <a
               href={profile.resumeUrl ?? "#"}
@@ -65,7 +65,7 @@ export function Hero({ profile }: HeroProps) {
           <div className="relative w-full max-w-[260px] sm:max-w-[320px] aspect-[3/4] rounded-md overflow-hidden group">
             {/* Cinematic Glow Background */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary-fixed/40 to-transparent blur-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
-            
+
             {/* Glass Container */}
             <div className="absolute inset-[2px] rounded-md bg-surface-variant/20 backdrop-blur-md border border-card-border shadow-2xl z-10 overflow-hidden">
               <Image
@@ -76,7 +76,7 @@ export function Hero({ profile }: HeroProps) {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority
               />
-              
+
               {/* Subtle inner shadow/gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
             </div>
@@ -87,7 +87,7 @@ export function Hero({ profile }: HeroProps) {
         <div className="lg:col-span-4 flex flex-col justify-center order-3 lg:order-3">
           <NavCardGrid />
         </div>
-        
+
       </div>
 
       {/* Bottom Socials */}
@@ -99,7 +99,7 @@ export function Hero({ profile }: HeroProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="w-12 h-12 rounded-md bg-surface-variant/30 backdrop-blur-sm border border-card-border flex items-center justify-center hover:bg-primary-fixed/20 hover:border-primary-fixed hover:text-primary-fixed transition-all duration-300 text-primary group"
+            className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-all duration-300 group"
           >
             <Icon size={20} className="group-hover:scale-110 transition-transform" />
           </a>

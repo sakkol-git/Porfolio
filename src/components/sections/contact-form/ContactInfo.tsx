@@ -70,22 +70,6 @@ export function ContactInfo({ channels, socials }: ContactInfoProps) {
           return content;
         })}
       </div>
-
-      {/* Social icons */}
-      <div className="flex gap-4 mt-8">
-        {socials.map((social) => (
-          <a
-            key={social.platform}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={social.label}
-            className="w-12 h-12 rounded-md bg-surface-container-lowest border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary-fixed hover:border-primary-fixed transition-all"
-          >
-            {SOCIAL_ICON_MAP[social.platform]}
-          </a>
-        ))}
-      </div>
     </div>
   );
 }

@@ -8,7 +8,7 @@ export function TimelineItem({ entry }: TimelineItemProps) {
   return (
     <div className="relative bg-surface-container-high rounded-md p-card-padding border border-surface-bright hover:border-surface-tint transition-colors duration-300">
       {/* Glowing node */}
-      <div className="absolute -left-12 top-8 w-4 h-4 rounded-md bg-surface border-2 border-primary-fixed shadow-[0_0_10px_rgba(245,226,156,0.5)] z-10 translate-x-[2px]" />
+      <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-4 h-4 rounded-md bg-surface border-2 border-primary-fixed shadow-[0_0_10px_rgba(245,226,156,0.5)] z-10" />
 
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
         <h3 className="text-headline-md text-primary font-bold">{entry.title}</h3>

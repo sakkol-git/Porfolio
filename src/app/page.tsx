@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero";
 import { getProfile } from "@/application/services/getProfile";
+import { Footer } from "@/components/layout";
 
 export default function Home() {
   const profile = getProfile();

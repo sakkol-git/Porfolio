@@ -14,7 +14,7 @@ export function ProjectCardActions({ links }: ProjectCardActionsProps) {
   ] as const;
 
   return (
-    <div className="flex flex-wrap gap-3 mt-[24px] border-t border-white/5 pt-[16px]">
+    <div className="flex flex-wrap gap-3 mt-2">
       {actions.map(({ icon: Icon, label, href, external }) => {
         if (!href) return null;
         
