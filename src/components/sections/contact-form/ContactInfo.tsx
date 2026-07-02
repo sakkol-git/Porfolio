@@ -8,7 +8,6 @@ const CONTACT_ICON_MAP: Record<string, ReactNode> = {
   email: <Mail size={20} strokeWidth={1.5} />,
   phone: <Phone size={20} strokeWidth={1.5} />,
   telegram: <FaTelegramPlane size={20} />,
-  location: <MapPin size={20} strokeWidth={1.5} />,
   github: <FaGithub size={20} />,
 };
 

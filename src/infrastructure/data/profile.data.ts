@@ -2,11 +2,11 @@ import { ProfileSchema, type Profile } from "@/domain/entities/Profile";
 
 const profileData: Profile = {
   name: "Chen Sakkol",
-  roles: ["Backend", "Full Stack", "Mobile", "IT Support"],
+  roles: ["Backend Developer", "Full Stack Developer", "Mobile Developer", "IT Support Engineer"],
   summary:
-    "I am a dedicated full-stack developer with a strong foundation in IT Engineering. Passionate about building robust backend architectures and seamless user experiences, I bridge the gap between complex technical requirements and elegant digital solutions. Currently pursuing my degree while actively contributing to real-world development projects.",
+    "I am a dedicated backend developer with a strong foundation in IT Engineering. Passionate about building robust backend architectures and seamless user experiences, I bridge the gap between complex technical requirements and elegant digital solutions. Currently pursuing my degree while actively contributing to real-world development projects.",
   avatarUrl:
-    "./sakkol.png",
+    "/sakkol.png",
   resumeUrl: "#",
   contact: [
     {

@@ -11,7 +11,7 @@ const projectsData: Project[] = [
     year: 2024,
     role: "Full-Stack Developer",
     overview: "A comprehensive internal laboratory management system built for Plant Lab. This system handles everything from sample tracking to automated reporting, drastically reducing manual paperwork and improving data accuracy.",
-    
+
     impactStatement: "Reduced manual reporting errors by 40% and accelerated sample tracking through a unified internal dashboard.",
     problemStatement: "Plant Lab relied on disjointed spreadsheets and manual entry for tracking thousands of biological samples. This caused data duplication, reporting delays, and increased the risk of critical errors in sample lifecycle management.",
     solution: {
@@ -70,15 +70,15 @@ const projectsData: Project[] = [
       "Built a highly responsive frontend with React.js",
     ],
     gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDFCMIU5kRX9uD4xmEkOcBW63qqJ2PGHzs_z96NYgtJP6-74Qk-jxUUXs1fmW9QanMVjEnzm6MCCXxEPV11RoUO97F-2Z3zGxceYUx0VcHJmPm8V6PUXvgXasw8NWe3FJ-YaPxre_xStO_MscX3oOUplg8CUPmLYxEVnb1A3SELYHjSp4CEDH4zXcCgqKGgdKDFiADusEa645Nc9uA19PRxdEgIZ5fXgX1zMtCNLrF4kP6D01MbmFCYAVBd7UpqJbMqBbGF8Og2330",
+      "/project/plantlab.png",
     ],
     links: {
       detailHref: "/projects/plant-lab-laboratory",
-      productionUrl: "#",
-      repoUrl: "#",
+      productionUrl: "https://inventory-frontend-beige-nine.vercel.app",
+      repoUrl: "https://github.com/sakkol-git/inventory_backend.git",
     },
     thumbnailUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDFCMIU5kRX9uD4xmEkOcBW63qqJ2PGHzs_z96NYgtJP6-74Qk-jxUUXs1fmW9QanMVjEnzm6MCCXxEPV11RoUO97F-2Z3zGxceYUx0VcHJmPm8V6PUXvgXasw8NWe3FJ-YaPxre_xStO_MscX3oOUplg8CUPmLYxEVnb1A3SELYHjSp4CEDH4zXcCgqKGgdKDFiADusEa645Nc9uA19PRxdEgIZ5fXgX1zMtCNLrF4kP6D01MbmFCYAVBd7UpqJbMqBbGF8Og2330",
+      "/project/plantlab.png",
     thumbnailAlt: "Plant Lab Laboratory dashboard preview screenshot",
   },
   {
@@ -90,7 +90,7 @@ const projectsData: Project[] = [
     year: 2025,
     role: "Lead Developer",
     overview: "The official web platform for the Youth Advancement For Development NGO. This platform serves as the central hub for their initiatives, volunteer onboarding, and donation processing.",
-    
+
     impactStatement: "Increased volunteer sign-ups by 25% and streamlined donation flows for a regional NGO.",
     problemStatement: "The NGO lacked a centralized digital presence, relying on social media and paper forms. This made it difficult to onboard volunteers efficiently, collect donations securely, and showcase the impact of their initiatives.",
     solution: {
@@ -148,16 +148,95 @@ const projectsData: Project[] = [
       "Optimized the site for maximum accessibility and SEO",
     ],
     gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAHkui4gfo1oIsEzR8d_7SDUsGpC79Fm8dqq4O4X0DID1IpEno078gp5kdVmBLdBqyfCbIr42Z8x-93x_CKLF_1nhbCcGMGcm-oCBbt2WKnkWZHFd-TjU-u4sILOz1nO5Oc35mUQ21GP6B-knrmoIO7fG-hjGjrPG6kWoxu_TvtYyVb1SCb2Qtui6sC6yY5_Rfyqc0oJCXwNztmcBtg_coD-c55sei2LiqMIfbMCj_E6DYWydRp8Ce0Mq9EPdjWg7WYxNZ9xLN9fvw",
+      "/project/yad.png",
     ],
     links: {
       detailHref: "/projects/youth-advancement-development",
-      productionUrl: "#",
-      repoUrl: "#",
+      productionUrl: "https://yadkh.org",
+      repoUrl: "https://github.com/sakkol-git/yad-website.git",
     },
     thumbnailUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAHkui4gfo1oIsEzR8d_7SDUsGpC79Fm8dqq4O4X0DID1IpEno078gp5kdVmBLdBqyfCbIr42Z8x-93x_CKLF_1nhbCcGMGcm-oCBbt2WKnkWZHFd-TjU-u4sILOz1nO5Oc35mUQ21GP6B-knrmoIO7fG-hjGjrPG6kWoxu_TvtYyVb1SCb2Qtui6sC6yY5_Rfyqc0oJCXwNztmcBtg_coD-c55sei2LiqMIfbMCj_E6DYWydRp8Ce0Mq9EPdjWg7WYxNZ9xLN9fvw",
+      "/project/yad.png",
     thumbnailAlt: "Youth Advancement For Development website preview screenshot",
+  },
+  {
+    id: "royal-elegance",
+    title: "Royal Elegance",
+    slug: "royal-elegance",
+    description: "Luxury hotel booking website.",
+    techStack: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
+    year: 2024,
+    role: "Full-Stack Developer",
+    overview: "A premium luxury hotel booking website for Royal Elegance. Features include real-time room availability, dynamic pricing, and an immersive user interface.",
+
+    impactStatement: "Elevated brand presence and increased direct bookings by 35% through a premium digital experience.",
+    problemStatement: "The luxury hotel was losing revenue to third-party booking platforms (OTAs) due to an outdated, clunky direct booking website that didn't reflect their premium brand image.",
+    solution: {
+      statement: "A visually stunning, high-performance web application tailored for luxury clientele with a frictionless booking engine.",
+      coreFeatures: [
+        "Real-time room availability and dynamic pricing engine",
+        "Immersive, animation-rich UI experience",
+        "Custom admin dashboard for hotel staff",
+      ],
+      architectureStatement: "Built on Next.js to provide blazing fast performance via SSR and SSG, utilizing Redis for caching room availability, and PostgreSQL as the primary datastore.",
+    },
+    architectureOverview: {
+      explanation: "A decoupled architecture where Next.js serves both the frontend and API routes. Complex queries (like availability searches) are cached in Redis to minimize database load during peak seasons.",
+      keyComponents: [
+        "Next.js Full-Stack Framework",
+        "Redis Caching Layer",
+        "PostgreSQL Database",
+        "Stripe Payment Gateway",
+      ],
+    },
+    techDetails: [
+      { name: "Next.js", reason: "Provides static generation for landing pages and server-side rendering for booking flows." },
+      { name: "Redis", reason: "Low-latency caching drastically speeds up complex room availability queries." },
+      { name: "Stripe", reason: "Ensures PCI compliance and handles global payment methods securely." },
+    ],
+    keyFeatures: [
+      "Sub-second page transitions with micro-animations",
+      "Intelligent room suggestion algorithm based on user dates and party size",
+      "Automated email confirmations and pre-arrival reminders via background workers",
+    ],
+    engineeringHighlights: [
+      "Reduced DB load by **70% using a Redis caching layer** for frequently queried date ranges.",
+      "Implemented **optimistic UI updates** to make the booking flow feel instantaneous.",
+      "Built a **custom date-picker component** to handle complex availability logic efficiently.",
+    ],
+    challenges: [
+      {
+        challenge: "Checking availability across multiple room types and overlapping date ranges was computationally heavy.",
+        solution: "Optimized the SQL queries using advanced indexing and implemented a Redis cache for common search parameters.",
+        impact: "Decreased average search query time from 400ms to 45ms.",
+      }
+    ],
+    metrics: [
+      { label: "Cache Hit Rate", value: "85%" },
+      { label: "Conversion Rate", value: "+35%" },
+    ],
+    learnings: [
+      "Balancing high-end visual animations with strict performance budgets",
+      "Designing efficient caching strategies for time-series availability data",
+      "Building resilient payment flows that handle edge cases gracefully",
+    ],
+
+    highlights: [
+      "Built an intuitive booking flow maximizing conversion rates",
+      "Developed an admin dashboard for room management",
+      "Ensured sub-second page loads using Next.js Static Generation",
+    ],
+    gallery: [
+      "/project/royalelagance.png",
+    ],
+    links: {
+      detailHref: "/projects/royal-elegance",
+      productionUrl: "https://royal-elegance-hg98.vercel.app",
+      repoUrl: "https://github.com/sakkol-git/royal-elegance.git",
+    },
+    thumbnailUrl:
+      "/project/royalelagance.png",
+    thumbnailAlt: "Royal Elegance hotel booking website preview screenshot",
   },
   {
     id: "wizard",
@@ -168,7 +247,7 @@ const projectsData: Project[] = [
     year: 2025,
     role: "Backend Architect",
     overview: "A robust e-commerce architecture powering the Wizard Online Commercial Website. The system handles complex inventory management, real-time sync, and multi-currency transactions.",
-    
+
     impactStatement: "Architected a scalable e-commerce backend supporting thousands of concurrent shoppers with zero downtime.",
     problemStatement: "The client needed a platform capable of handling flash sales and high traffic without crashing, while seamlessly integrating a web portal and a mobile application for a unified shopping experience.",
     solution: {
@@ -233,90 +312,11 @@ const projectsData: Project[] = [
     links: {
       detailHref: "/projects/wizard-online-commercial",
       productionUrl: "#",
-      repoUrl: "#",
+      repoUrl: "https://github.com/sakkol-git/wizard-shop-sprinboot.git",
     },
     thumbnailUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDrkMri41ei1YBTclpC0CumVbR_TxcpDttHC4Hj-2ufzcY93ar4761OS6CpT0atRctNrEixbZWvyR_ZZLJEw-tFNiAC5od1ABgvla5rgf-yVafVrNF9jfDiu6l17_JAukPrXY7-TkQgLjr7rgy-npMSkCRgNDFU9TQaWmlvlM52HR3AeHBgEaF6KFosd-XkJpoVnL-Ngxa20-7QG0CpLrxAcPBz-k_c9-HAdWTuCsutiE-Vwxld_Bh-JyVHTGGRQzEoqMoeT_zAPlM",
     thumbnailAlt: "Wizard e-commerce platform preview screenshot",
-  },
-  {
-    id: "royal-elegance",
-    title: "Royal Elegance",
-    slug: "royal-elegance",
-    description: "Luxury hotel booking website.",
-    techStack: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
-    year: 2024,
-    role: "Full-Stack Developer",
-    overview: "A premium luxury hotel booking website for Royal Elegance. Features include real-time room availability, dynamic pricing, and an immersive user interface.",
-    
-    impactStatement: "Elevated brand presence and increased direct bookings by 35% through a premium digital experience.",
-    problemStatement: "The luxury hotel was losing revenue to third-party booking platforms (OTAs) due to an outdated, clunky direct booking website that didn't reflect their premium brand image.",
-    solution: {
-      statement: "A visually stunning, high-performance web application tailored for luxury clientele with a frictionless booking engine.",
-      coreFeatures: [
-        "Real-time room availability and dynamic pricing engine",
-        "Immersive, animation-rich UI experience",
-        "Custom admin dashboard for hotel staff",
-      ],
-      architectureStatement: "Built on Next.js to provide blazing fast performance via SSR and SSG, utilizing Redis for caching room availability, and PostgreSQL as the primary datastore.",
-    },
-    architectureOverview: {
-      explanation: "A decoupled architecture where Next.js serves both the frontend and API routes. Complex queries (like availability searches) are cached in Redis to minimize database load during peak seasons.",
-      keyComponents: [
-        "Next.js Full-Stack Framework",
-        "Redis Caching Layer",
-        "PostgreSQL Database",
-        "Stripe Payment Gateway",
-      ],
-    },
-    techDetails: [
-      { name: "Next.js", reason: "Provides static generation for landing pages and server-side rendering for booking flows." },
-      { name: "Redis", reason: "Low-latency caching drastically speeds up complex room availability queries." },
-      { name: "Stripe", reason: "Ensures PCI compliance and handles global payment methods securely." },
-    ],
-    keyFeatures: [
-      "Sub-second page transitions with micro-animations",
-      "Intelligent room suggestion algorithm based on user dates and party size",
-      "Automated email confirmations and pre-arrival reminders via background workers",
-    ],
-    engineeringHighlights: [
-      "Reduced DB load by **70% using a Redis caching layer** for frequently queried date ranges.",
-      "Implemented **optimistic UI updates** to make the booking flow feel instantaneous.",
-      "Built a **custom date-picker component** to handle complex availability logic efficiently.",
-    ],
-    challenges: [
-      {
-        challenge: "Checking availability across multiple room types and overlapping date ranges was computationally heavy.",
-        solution: "Optimized the SQL queries using advanced indexing and implemented a Redis cache for common search parameters.",
-        impact: "Decreased average search query time from 400ms to 45ms.",
-      }
-    ],
-    metrics: [
-      { label: "Cache Hit Rate", value: "85%" },
-      { label: "Conversion Rate", value: "+35%" },
-    ],
-    learnings: [
-      "Balancing high-end visual animations with strict performance budgets",
-      "Designing efficient caching strategies for time-series availability data",
-      "Building resilient payment flows that handle edge cases gracefully",
-    ],
-
-    highlights: [
-      "Built an intuitive booking flow maximizing conversion rates",
-      "Developed an admin dashboard for room management",
-      "Ensured sub-second page loads using Next.js Static Generation",
-    ],
-    gallery: [
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDbsKY8vCvG-a1tFWUkBrjst8IaPN_oxdWSkWP-6Fx7oovdiTlsMM0ePzv68bH6zgvRGb823O-vEo4nRqIrM4wGB4wxFpgZPFfl00bNbABcGtbXw9Hvm43z2d6YSEv842vtDhv6Ea2jMCGTDwQHGy4VXRVP9r56RZiry68JnYkJXphTlh4hHYgKpr7Byz289j_t5E84sRRCg3gXq4RilQbY8jYshOsw4eUYRSjY10sqWcdjnz83JPRY2BepUD5Q7hzFAGwJjueMfNQ",
-    ],
-    links: {
-      detailHref: "/projects/royal-elegance",
-      productionUrl: "#",
-      repoUrl: "#",
-    },
-    thumbnailUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDbsKY8vCvG-a1tFWUkBrjst8IaPN_oxdWSkWP-6Fx7oovdiTlsMM0ePzv68bH6zgvRGb823O-vEo4nRqIrM4wGB4wxFpgZPFfl00bNbABcGtbXw9Hvm43z2d6YSEv842vtDhv6Ea2jMCGTDwQHGy4VXRVP9r56RZiry68JnYkJXphTlh4hHYgKpr7Byz289j_t5E84sRRCg3gXq4RilQbY8jYshOsw4eUYRSjY10sqWcdjnz83JPRY2BepUD5Q7hzFAGwJjueMfNQ",
-    thumbnailAlt: "Royal Elegance hotel booking website preview screenshot",
   },
 ];
 
