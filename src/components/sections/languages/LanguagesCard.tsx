@@ -7,7 +7,7 @@ interface LanguagesCardProps {
 export function LanguagesCard({ languages }: LanguagesCardProps) {
   return (
     <section className="col-span-1 lg:col-span-4 flex flex-col gap-[24px] pt-12 lg:pt-0">
-      <div className="bg-surface-container-low rounded-xl p-[32px] border border-surface-bright h-full">
+      <div className="bg-surface-container-low rounded-md p-[32px] border border-surface-bright h-full">
         <h2 className="text-headline-md text-primary mb-8 border-b border-surface-bright pb-4">
           Languages
         </h2>
@@ -28,9 +28,9 @@ export function LanguagesCard({ languages }: LanguagesCardProps) {
                   {lang.level}
                 </span>
               </div>
-              <div className="w-full h-1 bg-surface-dim rounded-full overflow-hidden">
+              <div className="w-full h-1 bg-surface-dim rounded-md overflow-hidden">
                 <div
-                  className={`h-full rounded-full ${
+                  className={`h-full rounded-md ${
                     lang.percentage >= 70
                       ? "bg-primary-fixed"
                       : "bg-surface-tint opacity-50"

@@ -10,9 +10,9 @@ interface AboutHeaderProps {
 
 export function AboutHeader({ profile }: AboutHeaderProps) {
   return (
-    <div className="flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
+    <div className="flex flex-col md:flex-row gap-8 lg:gap-16 items-center md:items-start w-full">
       {/* Profile Photo */}
-      <FadeIn delay={0.1} direction="right" className="shrink-0 relative w-[240px] h-[320px] rounded-[16px] overflow-hidden border border-outline-variant group">
+      <FadeIn delay={0.1} direction="right" className="shrink-0 relative w-full max-w-[240px] aspect-[3/4] rounded-md overflow-hidden border border-outline-variant group">
         <Image
           src={profile.avatarUrl}
           alt={`Photo of ${profile.name}`}

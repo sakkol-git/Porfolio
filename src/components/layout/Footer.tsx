@@ -21,7 +21,7 @@ export function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-all duration-200"
+            className="w-10 h-10 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-primary-fixed hover:text-on-primary-fixed transition-all duration-200"
           >
             <Icon size={20} strokeWidth={1.5} />
           </a>

@@ -11,7 +11,7 @@ interface GlassCardProps {
 
 function GlassCardRoot({ children, className, as: Tag = "div" }: GlassCardProps) {
   return (
-    <HoverScale scale={1.02} className={cn("glass-card rounded-lg overflow-hidden flex flex-col h-full min-h-[400px]", className)}>
+    <HoverScale scale={1.02} className={cn("glass-card rounded-md overflow-hidden flex flex-col h-full min-h-64", className)}>
       {children}
     </HoverScale>
   );

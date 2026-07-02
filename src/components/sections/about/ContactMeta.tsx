@@ -23,7 +23,7 @@ export function ContactMeta({ channels }: ContactMetaProps) {
       {metaChannels.map((channel) => {
         const content = (
           <div className="flex items-center gap-3" key={channel.type}>
-            <div className="text-on-surface-variant bg-surface-container p-2 rounded-full border border-outline-variant">
+            <div className="text-on-surface-variant bg-surface-container p-2 rounded-md border border-outline-variant">
               {META_ICON_MAP[channel.type]}
             </div>
             <div className="flex flex-col">

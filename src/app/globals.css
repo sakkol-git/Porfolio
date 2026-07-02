@@ -241,3 +241,18 @@ body {
   background-color: #f5e29c;
   opacity: 0.5;
 }
+
+/* ================================================================
+   ACCESSIBILITY & FOCUS STATES
+   ================================================================ */
+
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary-fixed);
+}
+
+/* Ensure focus works on standard links and buttons too */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary-fixed);
+}

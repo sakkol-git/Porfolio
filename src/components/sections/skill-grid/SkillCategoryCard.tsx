@@ -28,7 +28,7 @@ interface SkillCategoryCardProps {
 
 export function SkillCategoryCard({ category }: SkillCategoryCardProps) {
   return (
-    <div className="bg-card-bg border border-card-border rounded-[16px] p-[32px]">
+    <div className="bg-card-bg border border-card-border rounded-md p-[32px]">
       {/* Header */}
       <div className="flex items-center gap-4 mb-6">
         <span className="text-primary-fixed">

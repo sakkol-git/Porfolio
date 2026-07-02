@@ -8,7 +8,7 @@ export function RolePills({ roles }: RolePillsProps) {
       {roles.map((role) => (
         <span
           key={role}
-          className="glass-pill px-3 py-1 rounded-full text-meta text-primary-fixed"
+          className="glass-pill px-3 py-1 rounded-md text-meta text-primary-fixed"
         >
           {role}
         </span>

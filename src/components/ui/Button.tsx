@@ -31,7 +31,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded px-8 py-3 text-body-md font-medium transition-colors duration-200",
+    "inline-flex items-center justify-center gap-2 rounded-sm px-8 py-3 text-body-md font-medium transition-colors duration-200",
     VARIANT_CLASSES[variant],
     disabled && "opacity-50 cursor-not-allowed",
     className,

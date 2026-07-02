@@ -11,13 +11,13 @@ interface HoverScaleProps {
   as?: any;
 }
 
-export function HoverScale({ children, className, scale = 1.05, as = motion.div }: HoverScaleProps) {
+export function HoverScale({ children, className, scale = 1.02, as = motion.div }: HoverScaleProps) {
   const Component = as;
   return (
     <Component
       whileHover={{ scale }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 500, damping: 30 }}
       className={cn("origin-center", className)}
     >
       {children}

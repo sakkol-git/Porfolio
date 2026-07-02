@@ -10,7 +10,7 @@ export function Pill({ children, variant = "default", className }: PillProps) {
   return (
     <span
       className={cn(
-        "text-meta px-3 py-1 rounded",
+        "text-meta px-3 py-1 rounded-sm",
         variant === "proficient"
           ? "bg-primary-fixed border border-primary-fixed text-[#1b1b1b]"
           : "bg-card-bg border border-card-border text-body-text",

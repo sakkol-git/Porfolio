@@ -1,7 +1,9 @@
+import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { NavCardGrid } from "./NavCardGrid";
 import type { Profile } from "@/domain/entities/Profile";
 import { StaggerContainer, StaggerItem } from "@/components/animations/StaggerContainer";
+import { FadeIn } from "@/components/animations/FadeIn";
 
 interface HeroProps {
   profile: Profile;
@@ -15,32 +17,33 @@ const HERO_SOCIALS = [
 
 export function Hero({ profile }: HeroProps) {
   return (
-    <div className="min-h-screen bg-background flex flex-col pt-8 pb-12 px-8 md:px-16">
+    <div className="min-h-screen bg-background flex flex-col pt-8 pb-12 px-8 md:px-12 lg:px-16 overflow-hidden">
       {/* Top Logo */}
-      <div className="w-full text-center mb-auto">
-        <span className="font-display font-bold text-xl text-primary tracking-tight">
+      <FadeIn className="w-full text-center mb-12">
+        <span className="font-display font-bold text-2xl text-primary tracking-tight">
           SakkolDev
         </span>
-      </div>
+      </FadeIn>
 
-      {/* Main Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-stack-lg flex-grow items-center max-w-container-max mx-auto w-full">
+      {/* Main Content Grid - 3 Columns */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 flex-grow items-center max-w-container-max mx-auto w-full">
+        
         {/* Left Column (Bio) */}
-        <StaggerContainer className="col-span-1 md:col-span-6 md:pr-8 flex flex-col items-start">
+        <StaggerContainer className="lg:col-span-4 flex flex-col items-start order-2 lg:order-1">
           <StaggerItem>
-            <span className="inline-block text-primary-fixed text-meta font-medium mb-4">
+            <span className="inline-block text-primary-fixed text-meta uppercase tracking-widest font-bold mb-4 bg-primary-fixed/10 px-4 py-1.5 rounded-md border border-primary-fixed/20">
               Hello 👋
             </span>
           </StaggerItem>
           
           <StaggerItem>
-            <h1 className="text-display text-primary mb-6">
+            <h1 className="text-display text-4xl lg:text-5xl xl:text-6xl text-primary mb-6 leading-tight">
               I&apos;m {profile.name}
             </h1>
           </StaggerItem>
           
           <StaggerItem>
-            <p className="text-body-md text-body-text mb-10 max-w-md leading-relaxed">
+            <p className="text-body-md lg:text-body-lg text-body-text mb-10 max-w-md leading-relaxed">
               Third-year IT Engineering student and Full-Stack Developer passionate
               about building secure, scalable web and mobile applications with
               Laravel, Spring Boot, React.js and Next.js.
@@ -50,21 +53,45 @@ export function Hero({ profile }: HeroProps) {
           <StaggerItem>
             <a
               href={profile.resumeUrl ?? "#"}
-              className="inline-flex items-center bg-primary-fixed text-on-primary-fixed text-body-md font-semibold px-8 py-3 rounded hover:bg-primary-fixed-dim transition-colors duration-200"
+              className="inline-flex items-center bg-primary-fixed text-on-primary-fixed text-body-md font-semibold px-8 py-3.5 rounded-md hover:bg-primary-fixed-dim hover:shadow-[0_0_20px_rgba(var(--color-primary-fixed-rgb),0.3)] transition-all duration-300"
             >
               Download Resume
             </a>
           </StaggerItem>
         </StaggerContainer>
 
-        {/* Right Column (Bento Cards) */}
-        <div className="col-span-1 md:col-span-5 md:col-start-8">
+        {/* Center Column (Cinematic Portrait) */}
+        <FadeIn delay={0.3} className="lg:col-span-4 flex justify-center items-center order-1 lg:order-2 relative w-full">
+          <div className="relative w-full max-w-[260px] sm:max-w-[320px] aspect-[3/4] rounded-md overflow-hidden group">
+            {/* Cinematic Glow Background */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-primary-fixed/40 to-transparent blur-3xl opacity-60 group-hover:opacity-80 transition-opacity duration-700"></div>
+            
+            {/* Glass Container */}
+            <div className="absolute inset-[2px] rounded-md bg-surface-variant/20 backdrop-blur-md border border-card-border shadow-2xl z-10 overflow-hidden">
+              <Image
+                src={profile.avatarUrl}
+                alt={`${profile.name} portrait`}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
+              
+              {/* Subtle inner shadow/gradient for depth */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Right Column (Navigation) */}
+        <div className="lg:col-span-4 flex flex-col justify-center order-3 lg:order-3">
           <NavCardGrid />
         </div>
+        
       </div>
 
       {/* Bottom Socials */}
-      <div className="w-full flex justify-center gap-4 mt-auto">
+      <FadeIn delay={0.6} className="w-full flex justify-center gap-4 mt-12">
         {HERO_SOCIALS.map(({ icon: Icon, href, label }) => (
           <a
             key={label}
@@ -72,12 +99,13 @@ export function Hero({ profile }: HeroProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="w-10 h-10 rounded-full bg-card-bg border border-card-border flex items-center justify-center hover:bg-surface-variant transition-colors"
+            className="w-12 h-12 rounded-md bg-surface-variant/30 backdrop-blur-sm border border-card-border flex items-center justify-center hover:bg-primary-fixed/20 hover:border-primary-fixed hover:text-primary-fixed transition-all duration-300 text-primary group"
           >
-            <Icon size={16} className="text-primary" />
+            <Icon size={20} className="group-hover:scale-110 transition-transform" />
           </a>
         ))}
-      </div>
+      </FadeIn>
     </div>
   );
 }
+

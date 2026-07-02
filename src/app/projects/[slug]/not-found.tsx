@@ -15,7 +15,7 @@ export default function ProjectNotFound() {
         </p>
         <Link
           href="/projects"
-          className="mt-8 glass-pill inline-flex items-center gap-2 px-6 py-3 rounded-full text-body-md text-primary hover:text-primary-fixed transition-colors"
+          className="mt-8 glass-pill inline-flex items-center gap-2 px-6 py-3 rounded-md text-body-md text-primary hover:text-primary-fixed transition-colors"
         >
           <ArrowLeft size={18} />
           Back to projects

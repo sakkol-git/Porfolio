@@ -18,7 +18,7 @@ export function ProjectCardActions({ links }: ProjectCardActionsProps) {
       {actions.map(({ icon: Icon, label, href, external }) => {
         if (!href) return null;
         
-        const className = "glass-button flex items-center gap-2 px-4 py-2 rounded-full text-meta text-primary hover:text-primary-fixed";
+        const className = "glass-button flex items-center gap-2 px-4 py-2 rounded-md text-meta text-primary hover:text-primary-fixed";
         
         if (external) {
           return (

@@ -43,7 +43,7 @@ export function ContactInfo({ channels, socials }: ContactInfoProps) {
         {channels.map((channel) => {
           const content = (
             <div className="flex items-center gap-4" key={channel.type}>
-              <div className="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-fixed">
+              <div className="w-12 h-12 rounded-md bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary-fixed">
                 {CONTACT_ICON_MAP[channel.type]}
               </div>
               <div>
@@ -81,7 +81,7 @@ export function ContactInfo({ channels, socials }: ContactInfoProps) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.label}
-            className="w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary-fixed hover:border-primary-fixed transition-all"
+            className="w-12 h-12 rounded-md bg-surface-container-lowest border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary-fixed hover:border-primary-fixed transition-all"
           >
             {SOCIAL_ICON_MAP[social.platform]}
           </a>

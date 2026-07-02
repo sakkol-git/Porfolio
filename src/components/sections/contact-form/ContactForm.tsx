@@ -39,7 +39,7 @@ export function ContactForm() {
   };
 
   return (
-    <FadeIn delay={0.2} className="bg-card-bg border border-card-border rounded-lg p-card-padding shadow-2xl relative overflow-hidden">
+    <FadeIn delay={0.2} className="bg-card-bg border border-card-border rounded-md p-card-padding shadow-2xl relative overflow-hidden">
       {/* Subtle noise overlay */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay"
@@ -49,9 +49,9 @@ export function ContactForm() {
       />
 
       {submitted && (
-        <div className="absolute inset-0 z-20 flex items-center justify-center bg-card-bg/90 rounded-lg">
+        <div className="absolute inset-0 z-20 flex items-center justify-center bg-card-bg/90 rounded-md">
           <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary-fixed/20 flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 rounded-md bg-primary-fixed/20 flex items-center justify-center mx-auto mb-4">
               <Send size={24} className="text-primary-fixed" />
             </div>
             <p className="text-body-lg text-primary font-medium">Message sent!</p>
@@ -135,7 +135,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full sm:w-auto bg-primary-fixed text-on-primary-fixed text-body-md font-bold px-8 py-3 rounded flex items-center justify-center gap-2 hover:bg-primary-fixed-dim transition-colors disabled:opacity-50"
+            className="w-full sm:w-auto bg-primary-fixed text-on-primary-fixed text-body-md font-bold px-8 py-3 rounded-sm flex items-center justify-center gap-2 hover:bg-primary-fixed-dim transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span>Send Message</span>
             <Send size={20} strokeWidth={1.5} />

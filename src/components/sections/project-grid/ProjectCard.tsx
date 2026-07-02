@@ -8,7 +8,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="glass-card rounded-xl flex flex-col overflow-hidden group">
+    <article className="glass-card rounded-md flex flex-col overflow-hidden group">
       {/* Thumbnail */}
       <div className="h-48 w-full overflow-hidden relative">
         <Image
@@ -18,7 +18,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           height={300}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1B1B1B]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-container/90 to-transparent" />
       </div>
 
       {/* Content */}
@@ -32,7 +32,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="glass-pill px-3 py-1 rounded-full text-meta text-on-surface-variant"
+              className="glass-pill px-3 py-1 rounded-md text-meta text-on-surface-variant"
             >
               {tech}
             </span>

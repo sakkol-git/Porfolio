@@ -17,7 +17,7 @@ export function IconCircle({ children, className, size = "md" }: IconCircleProps
   return (
     <div
       className={cn(
-        "rounded-full border border-outline-variant flex items-center justify-center",
+        "rounded-md border border-outline-variant flex items-center justify-center",
         SIZE_CLASSES[size],
         className,
       )}

@@ -16,13 +16,13 @@ export function ProgressBar({ label, percentage, className }: ProgressBarProps) 
         <span>{label}</span>
         <span>{percentage}%</span>
       </div>
-      <div className="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+      <div className="w-full bg-surface-container-highest h-1 rounded-md overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${percentage}%` }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-          className="bg-primary-fixed h-full rounded-full"
+          className="bg-primary-fixed h-full rounded-md"
         />
       </div>
     </div>
