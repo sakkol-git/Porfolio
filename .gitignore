@@ -10,6 +10,14 @@
 !.yarn/releases
 !.yarn/versions
 
+# design
+# /page_1_landing
+# /page_2_projects
+# /page_3_about_me
+# /page_4_my_skills
+# /page_5_contact_me
+# /sakkol_dark_dev
+
 # testing
 /coverage
 
