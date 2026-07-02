@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chen Sakkol - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#f5e29c",
+                      "surface-dim": "#131313",
+                      "primary-container": "#f5e29c",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-tint": "#d8c683",
+                      "tertiary": "#ffffff",
+                      "error-container": "#93000a",
+                      "background": "#131313",
+                      "on-primary-container": "#71642b",
+                      "on-background": "#e4e2e1",
+                      "surface-container-low": "#1b1c1c",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface": "#131313",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-secondary": "#313030",
+                      "primary-fixed-dim": "#d8c683",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-container-highest": "#353535",
+                      "outline": "#969081",
+                      "on-surface-variant": "#cdc6b5",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed-variant": "#52460f",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "on-primary": "#3a3000",
+                      "tertiary-fixed": "#e5e2e1",
+                      "on-secondary-container": "#b7b5b4",
+                      "on-primary-fixed": "#221b00",
+                      "surface-variant": "#353535",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-surface": "#e4e2e1",
+                      "primary": "#ffffff",
+                      "surface-bright": "#393939",
+                      "on-tertiary-container": "#656464",
+                      "inverse-primary": "#6b5e25",
+                      "on-surface": "#e4e2e1",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "outline-variant": "#4b473a",
+                      "on-tertiary": "#303030",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface-container": "#1f2020",
+                      "tertiary-container": "#e5e2e1",
+                      "on-error": "#690005",
+                      "secondary": "#c8c6c5",
+                      "secondary-container": "#474746",
+                      "inverse-on-surface": "#303030",
+                      "on-error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-v-desktop": "100px",
+                      "card-padding": "32px",
+                      "gutter": "24px",
+                      "container-max": "1200px",
+                      "stack-sm": "8px",
+                      "section-v-mobile": "64px",
+                      "stack-lg": "24px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "meta": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Sora"
+                      ],
+                      "headline-lg": [
+                              "Sora"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Sora"
+                      ],
+                      "display": [
+                              "Sora"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "meta": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        .macbook-frame {
+            background: #2a2a2a;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 10;
+            border: 2px solid #3a3a3a;
+        }
+        .macbook-screen {
+            background: #1B1B1B;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #000;
+        }
+        .macbook-base {
+            background: linear-gradient(to bottom, #333 0%, #1a1a1a 100%);
+            height: 24px;
+            border-bottom-left-radius: 40px 10px;
+            border-bottom-right-radius: 40px 10px;
+            margin: 0 auto;
+            width: 105%;
+            margin-left: -2.5%;
+            position: relative;
+            z-index: 5;
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.1), 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .macbook-notch {
+            width: 120px;
+            height: 12px;
+            background: #1a1a1a;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: inset 0 -1px 2px rgba(255,255,255,0.05);
+        }
+      </style>
+</head>
+<body class="bg-[#4A4A4A] min-h-screen flex items-center justify-center py-20 relative font-body-md text-on-background">
+<!-- Mockup Container -->
+<div class="w-full max-w-[1200px] px-8 relative">
+<!-- MacBook Top / Screen -->
+<div class="macbook-frame">
+<div class="macbook-screen aspect-[16/10] flex flex-col relative">
+<!-- Inner Screen Canvas (Portfolio Landing) -->
+<div class="absolute inset-0 bg-background flex flex-col pt-8 pb-12 px-16">
+<!-- Top Logo -->
+<div class="w-full text-center mb-auto">
+<span class="font-display font-bold text-[20px] text-tertiary tracking-tight">SakkolDev</span>
+</div>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-12 gap-gutter flex-grow items-center">
+<!-- Left Column (Bio) -->
+<div class="col-span-6 pr-8">
+<span class="inline-block text-primary-fixed font-meta font-medium mb-4">Hello 👋</span>
+<h1 class="font-display text-display text-tertiary mb-6">I'm Chen Sakkol</h1>
+<p class="font-body-md text-[#B8B8B8] mb-10 max-w-md leading-relaxed">
+                                Third-year IT Engineering student and Full-Stack Developer passionate about building secure, scalable web and mobile applications with Laravel, Spring Boot, React.js and Next.js.
+                            </p>
+<button class="bg-primary-fixed text-[#1B1B1B] font-body-md font-semibold px-8 py-3 rounded-[6px] hover:bg-surface-tint transition-colors duration-200">
+                                Download Resume
+                            </button>
+</div>
+<!-- Right Column (Bento Cards) -->
+<div class="col-span-5 col-start-8">
+<div class="grid grid-cols-2 gap-6">
+<!-- Card 1 -->
+<a class="group aspect-square bg-[#232323] border border-[#3A3A3A] rounded-[16px] flex flex-col items-center justify-center hover:border-primary-fixed transition-colors duration-300" href="#">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center mb-4 group-hover:border-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0; font-weight: 300;">folder</span>
+</div>
+<span class="font-body-md text-tertiary">My Projects</span>
+</a>
+<!-- Card 2 -->
+<a class="group aspect-square bg-[#232323] border border-[#3A3A3A] rounded-[16px] flex flex-col items-center justify-center hover:border-primary-fixed transition-colors duration-300" href="#">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center mb-4 group-hover:border-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0; font-weight: 300;">badge</span>
+</div>
+<span class="font-body-md text-tertiary">About me</span>
+</a>
+<!-- Card 3 -->
+<a class="group aspect-square bg-[#232323] border border-[#3A3A3A] rounded-[16px] flex flex-col items-center justify-center hover:border-primary-fixed transition-colors duration-300" href="#">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center mb-4 group-hover:border-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0; font-weight: 300;">edit</span>
+</div>
+<span class="font-body-md text-tertiary">My Skills</span>
+</a>
+<!-- Card 4 -->
+<a class="group aspect-square bg-[#232323] border border-[#3A3A3A] rounded-[16px] flex flex-col items-center justify-center hover:border-primary-fixed transition-colors duration-300" href="#">
+<div class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center mb-4 group-hover:border-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 0; font-weight: 300;">mail</span>
+</div>
+<span class="font-body-md text-tertiary">Contact me</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Socials -->
+<div class="w-full flex justify-center gap-4 mt-auto">
+<a class="w-10 h-10 rounded-full bg-[#232323] border border-[#3A3A3A] flex items-center justify-center hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-sm">code</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-[#232323] border border-[#3A3A3A] flex items-center justify-center hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-sm">work</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-[#232323] border border-[#3A3A3A] flex items-center justify-center hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-tertiary text-sm">send</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- MacBook Bottom Base -->
+<div class="macbook-base relative">
+<div class="macbook-notch"></div>
+</div>
+<!-- Designer Credit (Bottom Right) -->
+<div class="absolute -bottom-24 right-8 flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover border border-outline-variant grayscale" data-alt="A small circular avatar portrait photo of a professional software developer against a neutral studio background. The lighting is soft and flattering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQNqkg-sLdDdV2wovCwVRejd7IZ1nKS9jbaC6Yh2z_H30ypENa5SPNEldD03EmPIa-ybfBLzhUcpDX13UwoL1Pfi3BkB2z1PvShDeo2Zui_Dhy2emClEDrrGNDAiNrT-onLKNZF0vzaqpQC4Rq8DEe5uwZii9JaT7qwltkHJ9dguw3ZpHOS8jTmBFOWC6UZnWlKpBOXrje8XKjaE3v3MLGUZVGUl5NvvudA8XMplXfCIjOu57NiMYbs5y_3zwaso9gvmSLEaBlNUw"/>
+<div class="flex flex-col">
+<span class="font-body-md text-white font-medium">Chen Sakkol</span>
+<span class="font-meta text-[#B8B8B8]">Backend &amp; Full-Stack Developer</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+/* ================================================================
+   DESIGN TOKENS — sourced from sakkol_dark_dev/DESIGN.md
+   ================================================================ */
+
+@theme {
+  /* ---- Colors ---- */
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-container-low: #1b1c1c;
+  --color-surface-container: #1f2020;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353535;
+  --color-on-surface: #e4e2e1;
+  --color-on-surface-variant: #cdc6b5;
+  --color-inverse-surface: #e4e2e1;
+  --color-inverse-on-surface: #303030;
+  --color-outline: #969081;
+  --color-outline-variant: #4b473a;
+  --color-surface-tint: #d8c683;
+  --color-primary: #ffffff;
+  --color-on-primary: #3a3000;
+  --color-primary-fixed: #f5e29c;
+  --color-on-primary-fixed: #221b00;
+  --color-primary-fixed-dim: #d8c683;
+  --color-on-primary-fixed-variant: #52460f;
+  --color-primary-container: #f5e29c;
+  --color-on-primary-container: #71642b;
+  --color-inverse-primary: #6b5e25;
+  --color-secondary: #c8c6c5;
+  --color-on-secondary: #313030;
+  --color-secondary-container: #474746;
+  --color-on-secondary-container: #b7b5b4;
+  --color-secondary-fixed: #e5e2e1;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-on-secondary-fixed: #1b1b1b;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-tertiary: #ffffff;
+  --color-on-tertiary: #303030;
+  --color-tertiary-container: #e5e2e1;
+  --color-on-tertiary-container: #656464;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-on-tertiary-fixed: #1b1c1c;
+  --color-on-tertiary-fixed-variant: #474746;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-background: #131313;
+  --color-on-background: #e4e2e1;
+  --color-surface-variant: #353535;
+
+  /* Semantic aliases for DESIGN.md Brand section */
+  --color-card-bg: #232323;
+  --color-card-border: #3A3A3A;
+  --color-body-text: #B8B8B8;
+
+  /* ---- Spacing ---- */
+  --spacing-container-max: 1200px;
+  --spacing-gutter: 24px;
+  --spacing-section-v-desktop: 100px;
+  --spacing-section-v-mobile: 64px;
+  --spacing-card-padding: 32px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 24px;
+
+  /* ---- Border Radius ---- */
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ---- Font Family ---- */
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ---- Font Size (with line-height, tracking, weight) ---- */
+  --font-size-display: 48px;
+  --font-size-headline-lg: 32px;
+  --font-size-headline-lg-mobile: 28px;
+  --font-size-headline-md: 24px;
+  --font-size-body-lg: 16px;
+  --font-size-body-md: 15px;
+  --font-size-label-caps: 14px;
+  --font-size-meta: 13px;
+}
+
+/* ================================================================
+   BASE STYLES
+   ================================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  line-height: 1.6;
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+}
+
+::selection {
+  background-color: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed);
+}
+
+/* ================================================================
+   TYPOGRAPHY UTILITIES
+   ================================================================ */
+
+.text-display {
+  font-family: var(--font-display);
+  font-size: var(--font-size-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-lg {
+  font-family: var(--font-display);
+  font-size: var(--font-size-headline-lg);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-lg-mobile {
+  font-family: var(--font-display);
+  font-size: var(--font-size-headline-lg-mobile);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-md {
+  font-family: var(--font-display);
+  font-size: var(--font-size-headline-md);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.text-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-lg);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-body-md {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.text-label-caps {
+  font-family: var(--font-body);
+  font-size: var(--font-size-label-caps);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.text-meta {
+  font-family: var(--font-body);
+  font-size: var(--font-size-meta);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ================================================================
+   COMPONENT UTILITY CLASSES
+   ================================================================ */
+
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(245, 226, 156, 0.5);
+}
+
+.glass-pill {
+  background: rgba(35, 35, 35, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+}
+
+/* ================================================================
+   TIMELINE
+   ================================================================ */
+
+.timeline-line {
+  position: relative;
+}
+
+.timeline-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 1px;
+  background-color: #f5e29c;
+  opacity: 0.5;
+}
