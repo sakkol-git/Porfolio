@@ -12,47 +12,42 @@ const profileData: Profile = {
     {
       type: "email",
       label: "Email",
-      value: "hello@sakkol.dev",
-      href: "mailto:hello@sakkol.dev",
+      value: "chensakkol2024@gmail.com",
+      href: "mailto:chensakkol2024@gmail.com",
     },
     {
       type: "phone",
       label: "Phone",
-      value: "+855 12 345 678",
-      href: "tel:+85512345678",
+      value: "+855 96 474 7120",
+      href: "tel:+855964747120",
     },
     {
       type: "telegram",
       label: "Telegram",
-      value: "@chensakkol",
-      href: "https://t.me/chensakkol",
+      value: "@sakkol",
+      href: "https://t.me/sakkol",
     },
     {
       type: "github",
       label: "GitHub",
       value: "github.com/chensakkol",
-      href: "https://github.com/chensakkol",
-    },
-    {
-      type: "location",
-      label: "Location",
-      value: "Phnom Penh, Cambodia",
-    },
+      href: "https://github.com/sakkol-git",
+    }
   ],
   socials: [
     {
       platform: "github",
-      href: "https://github.com/chensakkol",
+      href: "https://github.com/sakkol-git",
       label: "GitHub",
     },
     {
       platform: "linkedin",
-      href: "https://linkedin.com/in/chensakkol",
+      href: "https://www.linkedin.com/in/chen-sakkol-542155327",
       label: "LinkedIn",
     },
     {
       platform: "telegram",
-      href: "https://t.me/chensakkol",
+      href: "https://t.me/sakkol",
       label: "Telegram",
     },
   ],
